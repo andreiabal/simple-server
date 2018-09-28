@@ -9,7 +9,7 @@ $(document).ready(() => {
 });
 
 function getMovies(searchText){
-  axios.get('http://www.omdbapi.com/?apikey=53727f11&s='+searchText)
+  axios.get('https://www.omdbapi.com/?apikey=53727f11&s='+searchText)
     .then((response) => {
       console.log(response);
       let movies = response.data.Search;
@@ -34,7 +34,7 @@ function getMovies(searchText){
 }
 
 function movieSelected(imdbID){
-  axios.get('http://www.omdbapi.com/?apikey=53727f11&i='+imdbID)
+  axios.get('https://www.omdbapi.com/?apikey=53727f11&i='+imdbID)
   .then((response) => {
     console.log(response);
     let movie = response.data;
@@ -60,7 +60,7 @@ function movieSelected(imdbID){
     
     <div class="col-md-12 m-3 text-center">
       <a onclick="window.history.back()" class="btn btn-default">Voltar</a>
-      <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-default">IMDB</a>
+      <a href="https://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-default">IMDB</a>
       <a href="" class="btn btn-default">Adicionar</a>
     </div>
     `;
@@ -81,5 +81,6 @@ function callPage() {
   if (urlPath.startsWith("search/")) {
     let title = urlPath.replace("search/", '');
     getMovies(title);
+    console.log(ERROFIREBASE);
   };
 }
