@@ -1,0 +1,39 @@
+body{
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: center;
+  margin:15px;
+  background-color: #f8f9fa;
+}
+
+#movies img, #movie img{
+  width: 100%;
+}
+
+h5{
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+h1{
+  font-size: 5vw;
+  color: #778899;
+}
+
+h3{
+  font-size: 3vw;
+  color:#778899;
+}
+
+h2{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn{
+  background-color: #DCDCDC;
+  color: #696969;
+  margin: 10px;
+  cursor: pointer;
+}
+
